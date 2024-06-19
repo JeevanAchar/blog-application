@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "Running husky pre-commit"
+echo "Checking for lint errors"
+npm run lint
+
+echo "Building the project"
+npm run build
+npm run lint
